@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oreo AI (Web Version)
 
-## Getting Started
+A sleek, responsive, and feature-rich AI-powered chat application built using **Next.js**, **Tailwind CSS**, and **Framer Motion**. This app provides a real-time messaging experience with a smooth UI and dark mode support.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 💬 **Real-time Chat** with Oreo AI
+- 🎨 **Dark & Light Mode** support
+- ✨ **Smooth animations** using Framer Motion
+- 🌐 **Responsive UI** optimized for mobile & desktop
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** - Framework for React applications
+- **Tailwind CSS** - For styling and UI components
+- **Framer Motion** - For smooth animations
+- **Lucide Icons** - For modern and sleek icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 Screenshots
 
-## Learn More
+### Light Mode
 
-To learn more about Next.js, take a look at the following resources:
+![Light Mode](./light-mode.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Dark Mode
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Dark Mode](./dark-mode.png)
 
-## Deploy on Vercel
+## 🏗️ Installation & Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```sh
+   git clone https://github.com/Volatile-Viv/oreo-web.git
+   cd oreo-web
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+   The app will be available at **`http://localhost:3000`**
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
+
+## 📞 Contact
+
+For any inquiries or suggestions:
+
+- 🔗 Portfolio: [volatileviv.com](https://volatileviv.com)
+- 🐙 GitHub: [Volatile-Viv](https://github.com/yourusername)
