@@ -75,7 +75,7 @@ export default function ChatApp() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/Volatile-Viv"
+            href="https://github.com/Volatile-Viv/oreo-web"
             target="_blank"
             className="hover:opacity-80"
           >
