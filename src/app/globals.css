@@ -2,20 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global Typography */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans text-sm leading-relaxed;
+}
+
+/* Glass Effect */
+.glass {
+  @apply bg-white/20 backdrop-blur-xl shadow-2xl border border-white/30 rounded-2xl;
+}
+
+/* Dark & Light Mode */
+.dark-mode {
+  @apply bg-gray-950 text-white;
+}
+
+.light-mode {
+  @apply bg-gray-100 text-gray-900;
+}
+
+/* Chat Container */
+.chat-container {
+  @apply h-[28rem] overflow-y-auto space-y-4 p-4 border border-white/20 rounded-2xl;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+  @apply p-4 rounded-2xl max-w-[75%] text-base leading-tight;
+}
+
+.chat-bubble-user {
+  @apply bg-blue-600 text-white self-end ml-auto;
+}
+
+.chat-bubble-bot {
+  @apply bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white;
+}
+
+/* Input Box */
+.chat-input {
+  @apply flex items-center mt-4 border border-white/30 rounded-xl p-4 bg-white/10;
+}
+
+.chat-input-field {
+  @apply flex-1 p-3 bg-transparent outline-none text-white placeholder-gray-300 text-base;
+}
+
+/* Button Styles */
+.icon-button {
+  @apply p-3 rounded-xl bg-white/20 hover:bg-white/30 transition-all duration-200;
+}
+
+.send-button {
+  @apply p-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-all duration-200;
 }
