@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Moon, Sun, Send, Github, Globe } from "lucide-react";
 import Image from "next/image";
+import { v4 as uuidv4 } from "uuid";
 import "./globals.css";
 
 export default function ChatApp() {
@@ -12,17 +13,28 @@ export default function ChatApp() {
   ]);
   const [input, setInput] = useState("");
   const [darkMode, setDarkMode] = useState(false);
-  const chatEndRef = useRef<HTMLDivElement>(null!);
+  const [userId, setUserId] = useState("");
+  const chatEndRef = useRef<HTMLDivElement | null>(null);
 
+  // Load dark mode preference
   useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedMode);
+    setDarkMode(localStorage.getItem("darkMode") === "true");
+
+    // Generate or retrieve a unique user ID
+    let storedUserId = localStorage.getItem("userId");
+    if (!storedUserId) {
+      storedUserId = uuidv4();
+      localStorage.setItem("userId", storedUserId);
+    }
+    setUserId(storedUserId);
   }, []);
 
+  // Save dark mode preference
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
 
+  // Scroll chat to bottom
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -41,7 +53,7 @@ export default function ChatApp() {
       const response = await fetch("https://backend-oreo.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input, userId: "user-123" }),
+        body: JSON.stringify({ message: input, userId }),
       });
       const data = await response.json();
 
